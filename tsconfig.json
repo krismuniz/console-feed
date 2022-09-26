@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "lib",
-    "module": "commonjs",
-    "target": "es3",
+    "module": "ESNext",
     "lib": ["es6", "dom"],
     "inlineSourceMap": true,
     "skipDefaultLibCheck": true,
@@ -13,6 +12,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["jest"],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
   }
 }

@@ -1,26 +1,10 @@
-# console-feed [![Sponsors](https://img.shields.io/github/sponsors/samdenty?label=Sponsors)](https://github.com/sponsors/samdenty)
+# `@krismuniz/console-feed`
 
-[Sponsor this project](https://github.com/sponsors/samdenty)
-
-[![npm version](https://img.shields.io/npm/v/console-feed.svg?style=flat-square)](https://www.npmjs.com/package/console-feed)
-[![CircleCI](https://img.shields.io/circleci/project/github/samdenty99/console-feed.svg?style=flat-square)](https://circleci.com/gh/samdenty99/console-feed)
-[![npm downloads](https://img.shields.io/npm/dm/console-feed.svg?style=flat-square)](https://www.npmjs.com/package/console-feed)
-[![Demo](https://img.shields.io/badge/CodeSandbox-Demo-yellow.svg?style=flat-square)](https://codesandbox.io/s/rl7pk9w2ym)
+> NOTE: While this is a fork of [samdenty/console-feed](https://github.com/samdenty/console-feed/) it will _not_ be compatible with the original project and will likely diverge. Please consider using the original module instead.
 
 A React component that displays console logs from the current page, an iframe or transported across a server.
 
 ![Demo](https://user-images.githubusercontent.com/13242392/38513414-1bc32870-3c26-11e8-9a8f-0989d2142b1c.png)
-
-## Who's using it
-
-- [CodeSandbox.io](https://codesandbox.io)
-- [Framer](https://www.framer.com)
-- [Plunker](https://plnkr.co)
-- [P5.js Editor](https://editor.p5js.org)
-- [Builder.io](https://builder.io)
-- [Utopia](https://utopia.app/project)
-- [facebook/flipper](https://github.com/facebook/flipper)
-- [Effector playground](https://share.effector.dev/)
 
 ## Features
 
@@ -43,11 +27,9 @@ npm install console-feed
 
 ## Basic usage
 
-[CodeSandbox](https://codesandbox.io/s/rl7pk9w2ym)
-
 ```js
 import React from 'react'
-import { Hook, Console, Decode } from 'console-feed'
+import { Hook, Console, Decode } from '@krismuniz/console-feed'
 
 class App extends React.Component {
   state = {
@@ -76,7 +58,7 @@ OR with hooks:
 
 ```js
 import React, { useState, useEffect } from 'react'
-import { Console, Hook, Unhook } from 'console-feed'
+import { Console, Hook, Unhook } from '@krismuniz/console-feed'
 
 const LogsContainer = () => {
   const [logs, setLogs] = useState([])
@@ -189,17 +171,3 @@ Hook(
   100 // limit to 100 keys/elements
 )
 ```
-
----
-
-## Developing
-
-To run `console-feed` locally, simply run:
-
-```bash
-yarn
-yarn start
-yarn test:watch
-```
-
-Head over to `http://localhost:3000` in your browser, and you'll see the demo page come up. After you make changes you'll need to reload, but the jest tests will automatically restart.

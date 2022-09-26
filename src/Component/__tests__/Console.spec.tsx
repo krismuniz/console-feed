@@ -93,7 +93,7 @@ it('linkify object', () => {
   )
 
   expect(result.html()).toContain(
-    '<a href="https://example.com" class="linkified" target="_blank">https://example.com</a>'
+    '<a href="https://example.com">https://example.com</a>'
   )
 })
 
@@ -108,13 +108,14 @@ it('linkify object and pass options', () => {
         },
       ]}
       linkifyOptions={{
+        target: "_blank",
         attributes: (href, type) => (type === 'url' ? { rel: 'nofollow' } : {}),
       }}
     />
   )
 
   expect(result.html()).toContain(
-    '<a href="https://example.com" class="linkified" target="_blank" rel="nofollow">https://example.com</a>'
+    '<a href="https://example.com" target="_blank" rel="nofollow">https://example.com</a>'
   )
 })
 

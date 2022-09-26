@@ -1,15 +1,12 @@
 {
-  "name": "console-feed",
-  "version": "3.3.0",
+  "name": "@krismuniz/console-feed",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "description": "A React component that displays console logs from the current page, an iframe or transported across a server",
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json --declaration && for file in src/**/*.d.ts; do cp $file ${file/src/lib}; done",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "start": "nwb serve-react-demo",
     "release": "yarn test && yarn clean && yarn build && yarn publish && yarn clean",
-    "precommit": "pretty-quick --staged",
     "test": "jest --verbose",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
@@ -18,32 +15,33 @@
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
     "emotion-theming": "^10.0.10",
-    "linkifyjs": "^2.1.6",
-    "react-inspector": "^5.1.0"
+    "linkify-html": "^4.0.0",
+    "linkify-react": "^4.0.0",
+    "linkifyjs": "^4.0.0",
+    "react-inspector": "^5.1.1"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.9",
     "@types/jest": "^22.2.3",
-    "@types/linkifyjs": "2.1.3",
     "@types/react": "^16.9.50",
     "@types/react-dom": "^16.9.8",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "husky": "^0.14.3",
     "immutability-helper": "^2.6.6",
-    "jest": "^22.4.3",
-    "lodash": "^4.17.5",
-    "nwb": "0.21.x",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
     "prettier": "^2.1.2",
-    "pretty-quick": "^1.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "ts-jest": "^22.4.2",
+    "ts-jest": "^29.0.2",
     "ts-loader": "^3.5.0",
-    "typescript": "^4.1.0-beta"
+    "typescript": "^4.8.3"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./scripts/test.js",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "./scripts/test.js"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -57,7 +55,7 @@
     ]
   },
   "peerDependencies": {
-    "react": "^15.x || ^16.x || ^17.x"
+    "react": "^16.x || ^17.x"
   },
   "files": [
     "es",
@@ -82,14 +80,14 @@
     "ui",
     "view"
   ],
-  "homepage": "https://github.com/samdenty99/console-feed",
+  "homepage": "https://github.com/krismuniz/console-feed",
   "repository": {
     "type": "git",
-    "url": "https://github.com/samdenty99/console-feed.git"
+    "url": "https://github.com/krismuniz/console-feed.git"
   },
   "bugs": {
-    "url": "https://github.com/samdenty99/console-feed/issues"
+    "url": "https://github.com/krismuniz/console-feed/issues"
   },
-  "author": "Sam Denty <samddenty@gmail.com> (http://github.com/samdenty99)",
+  "author": "Kristian Muniz <contact@krismuniz.com> (https://krismuniz.com)",
   "license": "MIT"
 }

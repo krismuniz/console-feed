@@ -1,7 +1,6 @@
 import { withTheme } from 'emotion-theming'
 import * as React from 'react'
 import {
-  DOMInspector,
   Inspector,
   ObjectLabel,
   ObjectName,
@@ -103,7 +102,7 @@ class CustomInspector extends React.PureComponent<Props, any> {
           </Table>
         ) : dom ? (
           <HTML>
-            <DOMInspector {...this.props} theme={styles} />
+            <Inspector {...this.props} theme={styles} />
           </HTML>
         ) : (
           <Inspector
@@ -146,7 +145,7 @@ class CustomInspector extends React.PureComponent<Props, any> {
     if (data instanceof HTMLElement)
       return (
         <HTML>
-          <DOMInspector data={data} theme={styles} />
+          <Inspector data={data} />
         </HTML>
       )
 
