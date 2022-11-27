@@ -1,8 +1,9 @@
 {
   "name": "@krismuniz/console-feed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "type": "module",
   "description": "A React component that displays console logs from the current page, an iframe or transported across a server",
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json --declaration && for file in src/**/*.d.ts; do cp $file ${file/src/lib}; done",
@@ -55,7 +56,7 @@
     ]
   },
   "peerDependencies": {
-    "react": "^16.x || ^17.x"
+    "react": "^16.x || ^17.x || ^18.x"
   },
   "files": [
     "es",

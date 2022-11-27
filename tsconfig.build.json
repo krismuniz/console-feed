@@ -4,7 +4,6 @@
     "rootDir": "src",
     "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "classic"
   },
   "exclude": [
     "./node_modules",

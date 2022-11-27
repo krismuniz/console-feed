@@ -39,7 +39,7 @@ export const Message = styled('div')(({ theme: { styles, method } }) => ({
     verticalAlign: 'top',
     boxSizing: 'border-box',
     fontFamily: styles.BASE_FONT_FAMILY,
-    whiteSpace: 'pre-wrap',
+    whiteSpace: 'pre-line',
     fontSize: styles.BASE_FONT_SIZE,
   },
   '& a': {
@@ -79,7 +79,7 @@ export const AmountIcon = styled('div')(({ theme: { styles, method } }) => ({
 /**
  * timestamp
  */
- export const Timestamp = styled('div')(({ theme: { styles, method } }) => ({
+export const Timestamp = styled('div')(({ theme: { styles, method } }) => ({
   padding: '3px 0px 0px 5px',
   width: '110px',
   height: styles.LOG_ICON_HEIGHT,
@@ -93,8 +93,8 @@ export const Content = styled('div')(({ theme: { styles } }) => ({
   clear: 'right',
   position: 'relative',
   padding: styles.PADDING,
-  marginLeft: 15,
+  marginLeft: 0,
   minHeight: 18,
   flex: 'auto',
-  width: 'calc(100% - 15px)',
+  width: '100%',
 }))
